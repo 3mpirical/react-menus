@@ -1,2 +1,285 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
 body {
-  background-color: purple; }
+  box-sizing: border-box;
+  font-size: 1.6rem;
+  font-family: sans-serif;
+  letter-spacing: 1px;
+  color: white;
+  background-color: #212121; }
+
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap; }
+
+.wallpaper {
+  background-image: url("../img/wallpaper.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: none;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  bottom: 0;
+  z-index: -1000; }
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  height: 5rem;
+  width: 100vw;
+  padding: 0 2rem;
+  border-bottom: 1px solid white;
+  background-color: rgba(117, 117, 117, 0.9);
+  z-index: 100; }
+  .navbar__title {
+    font-size: 2.5rem; }
+  .navbar__dropdown-icon {
+    height: 3.5rem;
+    border-radius: 100px;
+    cursor: pointer; }
+    .navbar__dropdown-icon:hover {
+      background-color: rgba(255, 255, 255, 0.2); }
+
+.clearfix {
+  width: 100vw;
+  height: 5rem; }
+
+.sidebar {
+  position: fixed;
+  width: 30rem;
+  height: calc(100vh - 5rem);
+  top: 5rem;
+  right: 0;
+  background-color: rgba(117, 117, 117, 0.9);
+  text-align: center;
+  overflow-y: scroll;
+  z-index: 100; }
+  .sidebar h3 {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid white; }
+  .sidebar__button {
+    border: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 0.5rem 2rem;
+    border: 1px solid white;
+    border-radius: 3px;
+    cursor: pointer;
+    color: white;
+    letter-spacing: 2px;
+    font-size: 1.4rem;
+    margin: 2rem 1rem;
+    transition-duration: 0.2s; }
+    .sidebar__button:hover {
+      background-color: rgba(255, 255, 255, 0.4); }
+    .sidebar__button:active {
+      background-color: white; }
+
+.menu-form {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 auto; }
+  .menu-form .form-item {
+    height: 3rem;
+    margin-bottom: 2rem; }
+  .menu-form .input {
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    border-bottom: 1px solid white;
+    padding-left: 1rem;
+    letter-spacing: 1px;
+    font-size: 1.3rem; }
+    .menu-form .input::placeholder {
+      color: white; }
+  .menu-form button {
+    border: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 0.5rem 2rem;
+    border: 1px solid white;
+    border-radius: 3px;
+    cursor: pointer;
+    color: white;
+    letter-spacing: 2px;
+    font-size: 1.4rem;
+    transition-duration: 0.2s; }
+    .menu-form button:hover {
+      background-color: rgba(255, 255, 255, 0.4); }
+    .menu-form button:active {
+      background-color: white; }
+
+.menu-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  margin: 0 auto; }
+  .menu-list__item {
+    list-style: none;
+    border: 1px solid white;
+    border-radius: 3px;
+    width: 50%;
+    overflow-x: hidden;
+    padding: 0.5rem 0;
+    margin: 1rem 0;
+    cursor: pointer; }
+    .menu-list__item:hover {
+      background-color: white;
+      color: rgba(117, 117, 117, 0.9); }
+  .menu-list .edit-form {
+    border: 1px solid white;
+    border-radius: 3px;
+    padding-top: 1rem;
+    margin: 2rem 0; }
+  .menu-list .button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto; }
+    .menu-list .button-container .edit-btn {
+      font-size: 1.3rem; }
+
+.menu__container {
+  position: relative;
+  flex-shrink: 0;
+  width: 40rem;
+  margin: 5rem;
+  border: 1px solid white;
+  border-radius: 3px;
+  padding: 2rem;
+  background-color: rgba(117, 117, 117, 0.8); }
+
+.menu__heading {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid white;
+  padding-bottom: 1rem; }
+  .menu__heading button {
+    padding: 0.5rem 1rem;
+    border-radius: 3px;
+    margin-left: 1rem;
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid white;
+    color: white;
+    transition-duration: 0.2s;
+    cursor: pointer; }
+    .menu__heading button:hover {
+      background-color: white;
+      color: rgba(117, 117, 117, 0.9); }
+
+.menu__times {
+  font-size: 1.7rem;
+  margin-left: 1rem; }
+
+.food__container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 1px solid white;
+  font-size: 2rem;
+  padding: 0.5rem;
+  height: 3.5rem;
+  cursor: pointer;
+  transition-duration: 0.1s;
+  overflow: hidden; }
+  .food__container:hover {
+    background-color: #a1a1a1;
+    color: #40E0D0; }
+
+.food__price {
+  width: 8rem;
+  border-right: 1px solid white;
+  margin-right: 1rem;
+  overflow: hidden; }
+
+.food__name {
+  padding-left: 1rem; }
+
+.edit-food-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 2rem;
+  height: 3.5rem;
+  border-bottom: 1px solid white; }
+  .edit-food-form form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%; }
+  .edit-food-form input {
+    font-size: 1.7rem;
+    width: 57.5%;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    padding-left: 0.75rem;
+    color: #40E0D0;
+    height: 100%; }
+    .edit-food-form input:first-of-type {
+      width: 17.5%; }
+    .edit-food-form input::placeholder {
+      color: #bababa; }
+  .edit-food-form button {
+    font-size: 1rem;
+    width: 15%;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    border-right: 1px solid white;
+    border-left: 1px solid white;
+    border-radius: 3px;
+    cursor: pointer;
+    height: 85%;
+    transition-duration: 0.2s; }
+    .edit-food-form button:hover {
+      background-color: white;
+      color: rgba(117, 117, 117, 0.9); }
+
+.add-food-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 2rem;
+  height: 3.5rem;
+  border-bottom: 1px solid white; }
+  .add-food-form input {
+    font-size: 1.7rem;
+    width: 57.5%;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    padding-left: 0.75rem;
+    color: #40E0D0;
+    height: 100%; }
+    .add-food-form input:first-of-type {
+      width: 25%; }
+    .add-food-form input::placeholder {
+      color: #bababa; }
+  .add-food-form button {
+    font-size: 1rem;
+    width: 15%;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    border-right: 1px solid white;
+    border-left: 1px solid white;
+    border-radius: 3px;
+    cursor: pointer;
+    height: 85%;
+    transition-duration: 0.2s; }
+    .add-food-form button:hover {
+      background-color: white;
+      color: rgba(117, 117, 117, 0.9); }
